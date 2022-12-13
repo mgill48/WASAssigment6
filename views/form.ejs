@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            New Book
+        </title>
+    </head>
+    <body>
+        <h1 style="text-align: center;">
+            Add Book
+        </h1>
+                 
+<div class="middle">
+    <form action="/books/create" method="POST">
+        <h2>Upload new book:</h2>
+        <label for="inputid">Book Id</label>
+        <input type="text" name="id" id="inputid"  placeholder="First" autofocus required>
+        <label for="inputName">Book Name</label>
+        <input type="text" name="Name" id="inputName"  placeholder="Name" required>
+        <label for="inputAuthorName">Author Name</label>
+        <input type="text" name="AuthorName" id="inputAuthorName"  placeholder="Author" required>
+        <label for="inputDescription">Description</label>
+        <input type="text" name="Description" id="inputDescription"  placeholder="Description" required>
+        <button type="submit">Upload</button>
+    </form>
+</div>
