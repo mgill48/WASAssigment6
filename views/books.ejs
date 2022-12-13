@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Bookslist
+        </title>
+
+        
+    </head>
+    <body>
+        <h1 style="text-align: center;">
+            Books List
+        </h1>
+                 
+        
+        
+        <div class="middle">
+            <ol>
+                <% books.forEach(s =>
+                    { %> <a href = "<%= `/books/${s._id}` %>" ">
+                        <li><img src=<%= s.BookImage %>
+                        width="200px"
+                        height="300px"/>
+                        
+                        <%= s.Name %></a>
+                        
+                        </li><br>
+                        
+
+                <%  });
+                %>
+            </ol>
+        </div>
+    </body>
+</html>
