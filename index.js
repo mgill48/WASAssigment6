@@ -44,6 +44,9 @@ app.get("/addnewbook", homeController.new)
 app.get("/admin", bookController.admin)
 app.delete("/books/:id/delete", bookController.delete, bookController.redirectView);
 app.post("/books/create", bookController.create, bookController.redirectView);
+app.all('*', (req, res) => {
+    res.status(404).send('<h1>404! Page not found</h1>');
+  });
 app.listen(app.get("port"), () => {
     console.log(`Server running at http://localhost:${app.get("port")}`);
   });
